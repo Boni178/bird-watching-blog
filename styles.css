@@ -1,0 +1,297 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+.home{
+    background-image: url('pexels-coldbeer-277046249-32014644.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    top:0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    padding-left: 20px;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark tint */
+  z-index: 1;
+}
+
+.home > * {
+    position: relative;
+    z-index: 2; /* Ensure text is above the tint */
+}
+
+
+.header {
+  background-color: #0077b6;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd54f;
+}
+
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.featured-image, .blog-post img, .about img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.container-box h2 {
+  margin-bottom: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+
+}
+#about {
+    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+/* gallery styling*/
+#gallery {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr); 
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+   padding: 15px;
+  gap: 10px;
+  justify-content: center;
+
+}
+/* gallery image styling*/
+#gallery img {
+  width: 100%;
+  max-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+ 
+}
+/* gallery image hover effect*/
+#gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.blog-post {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  animation: slideUp 0.8s ease;
+}
+
+/* form styling  */
+form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+    border: 1px solid #ccc; 
+    max-height: 100%;
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* labels styling  */
+label {
+    font-weight: bold;
+    color: #333;
+}
+/* Input field styles*/
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: none; /* Prevents resizing */
+}
+
+
+/* button styles  */
+button {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* Hover Effect for subscription form*/
+button:hover {
+    transform: translateY(-2px);
+    background-color: #2980b9;
+}
+/* email feedback */
+.feedback {
+    color: red;
+    font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Footer section */
+.footer {
+  background-color: #0077b6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* Footer heading */
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 10px; 
+}
+
+
+/* footer container */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+/* top footer */
+.footer-top{
+display: flex;
+flex-direction: column;
+
+height: 200px;
+align-items: center;
+justify-content: center;
+margin: 0; 
+padding: 0;
+text-align: center;
+}
+
+
+
+/* footer contact styling */
+.footer-contact-info {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  font-size: 16px;
+}
+/* footer contact text */
+.footer-contact-info p {
+ font-weight: bold;
+  font-size: 16px;
+  margin: 0; 
+  display: flex;
+  align-items: center; 
+  gap: 5px;
+}
+
+/* icon color when hovered */
+.contact-info i {
+ 
+  color: #ffd54f;
+}
+/* social media icons */
+.social-media a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+/* Social media icons hover effect */
+.social-media a:hover {
+  color: #ffd54f;
+}
+/* bottom footer */
+.footer-bottom {
+  display: flex; 
+  background-color:  #0077b6;
+  justify-content: space-evenly; 
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+ 
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
